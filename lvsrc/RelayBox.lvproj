@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="16008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -16,9 +17,11 @@
 		<Item Name="sub-VIs" Type="Folder" URL="../sub-VIs">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="JKI version.vi" Type="VI" URL="../JKI version.vi"/>
-		<Item Name="Read_relay.vi" Type="VI" URL="../Read_relay.vi"/>
 		<Item Name="Set Resistor.vi" Type="VI" URL="../Set Resistor.vi"/>
+		<Item Name="Read_relay.vi" Type="VI" URL="../Read_relay.vi"/>
+		<Item Name="Set Resistor old.vi" Type="VI" URL="../Set Resistor old.vi"/>
+		<Item Name="USB Relay Control 256.vi" Type="VI" URL="../USB Relay Control 256.vi"/>
+		<Item Name="USB Relay Control bool.vi" Type="VI" URL="../USB Relay Control bool.vi"/>
 		<Item Name="USB Relay Control.vi" Type="VI" URL="../USB Relay Control.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
