@@ -17,12 +17,11 @@
 		<Item Name="sub-VIs" Type="Folder" URL="../sub-VIs">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Set Resistor.vi" Type="VI" URL="../Set Resistor.vi"/>
-		<Item Name="Read_relay.vi" Type="VI" URL="../Read_relay.vi"/>
-		<Item Name="Set Resistor old.vi" Type="VI" URL="../Set Resistor old.vi"/>
-		<Item Name="USB Relay Control 256.vi" Type="VI" URL="../USB Relay Control 256.vi"/>
-		<Item Name="USB Relay Control bool.vi" Type="VI" URL="../USB Relay Control bool.vi"/>
+		<Item Name="old-VIs" Type="Folder" URL="../old-VIs">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="USB Relay Control.vi" Type="VI" URL="../USB Relay Control.vi"/>
+		<Item Name="Set Resistor.vi" Type="VI" URL="../Set Resistor.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
