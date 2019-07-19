@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2019-07-15 12:40:19" Modified_Date="2019-07-18 10:55:29" Creator="Patrick" Comments="" ID="f8d9a96423773ed1945f567e6ad78220">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2019-07-15 12:40:19" Modified_Date="2019-07-18 11:21:52" Creator="Patrick" Comments="" ID="a69a7b4aea8831da46632392f2999210">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Relay_Box</Package_File_Name>
-    <Library_Version>1.1.0.5</Library_Version>
+    <Library_Version>1.1.0.6</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -38,7 +38,7 @@ Relay Control is now polymorphic
 --Comments on read relay and relay control
 --JKI State Machine is now recognized
 --Set resistor VI can now be wired to
---fixed icon</Release_Notes>
+--fixed icon, added terminals for error wiring</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -258,7 +258,7 @@ Relay Control is now polymorphic
         <Path>USB Relay Control.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B36A2B420365DCD876BBD766105BF395</GUID>
+      <GUID>C4C9F0FA435425D232114E1E7F54EBCD</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -293,7 +293,7 @@ Relay Control is now polymorphic
         <Path>old-VIs\Set Resistor old.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>15A2A698107684E605A4FFDEFF380961</GUID>
+      <GUID>857B39590A97965B47A54A27C6D29912</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -580,7 +580,7 @@ Relay Control is now polymorphic
         <Path>sub-VIs\USB Relay Control bool.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>00F45ED6C66E7C549DFFF6AA72BA3D34</GUID>
+      <GUID>8CCCA6456061E4BD6F80310EBCC40F01</GUID>
     </Functions_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>-1</Parent_Palette_Index>
@@ -615,7 +615,7 @@ Relay Control is now polymorphic
         <Path>Type_defs</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>48AF0802723744764D12F7D2AA82CD00</GUID>
+      <GUID>ACFA41F9923EDA79B56E58C205498D2E</GUID>
     </Controls_Palette_Data>
     <Controls_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -650,7 +650,7 @@ Relay Control is now polymorphic
         <Path>Type_defs\Resistor--enum.ctl</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BA4F7BC6D93F7D81FDDF3390C3C62EE2</GUID>
+      <GUID>8B6DAED5D63CD0E4632AC31DFE8751AA</GUID>
     </Controls_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
