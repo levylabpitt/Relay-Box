@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="16008000">
+<Project Type="Project" LVVersion="19008000">
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
@@ -12,16 +12,21 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="build support" Type="Folder">
-			<Item Name="Relay Box.vipb" Type="Document" URL="../Relay Box.vipb"/>
+			<Item Name="Relay Box.vipb" Type="Document" URL="../../build support/Relay Box.vipb"/>
+			<Item Name="Relay Box.vipc" Type="Document" URL="../../build support/Relay Box.vipc"/>
 		</Item>
-		<Item Name="sub-VIs" Type="Folder" URL="../sub-VIs">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
-		<Item Name="old-VIs" Type="Folder" URL="../old-VIs">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="subVIs" Type="Folder">
+			<Item Name="Display_EEPROM.vi" Type="VI" URL="../subVIs/Display_EEPROM.vi"/>
+			<Item Name="FT_EEPROM_Read.vi" Type="VI" URL="../subVIs/FT_EEPROM_Read.vi"/>
+			<Item Name="FT_EEPROM_Write.vi" Type="VI" URL="../subVIs/FT_EEPROM_Write.vi"/>
+			<Item Name="Port Index Search.vi" Type="VI" URL="../subVIs/Port Index Search.vi"/>
+			<Item Name="Read_relay.vi" Type="VI" URL="../subVIs/Read_relay.vi"/>
+			<Item Name="USB Relay Control 256.vi" Type="VI" URL="../subVIs/USB Relay Control 256.vi"/>
+			<Item Name="USB Relay Control bool.vi" Type="VI" URL="../subVIs/USB Relay Control bool.vi"/>
 		</Item>
 		<Item Name="USB Relay Control.vi" Type="VI" URL="../USB Relay Control.vi"/>
 		<Item Name="Set Resistor.vi" Type="VI" URL="../Set Resistor.vi"/>
+		<Item Name="D2XX_Functions.lvlib" Type="Library" URL="../D2XX_Functions/D2XX_Functions.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
@@ -63,10 +68,11 @@
 				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="ftd2xx.dll" Type="Document" URL="../CDM v2.12.36.4 WHQL Certified/i386/ftd2xx.dll"/>
+			<Item Name="Resistor--enum.ctl" Type="VI" URL="../Typedefs/Resistor--enum.ctl"/>
 			<Item Name="FTD2XX.dll" Type="Document" URL="FTD2XX.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Resistor--enum.ctl" Type="VI" URL="../Type_defs/Resistor--enum.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
