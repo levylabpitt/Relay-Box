@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2022-06-01 17:21:43" Modified_Date="2022-06-01 18:10:58" Creator="Patrick Irvin" Comments="" ID="032ecbc1581293dc3b81b400a6e0c146">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2022-06-01 17:21:43" Modified_Date="2022-06-02 14:07:33" Creator="Patrick Irvin" Comments="" ID="4c917505cddb98184630dff1f87af273">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Relay_Box</Package_File_Name>
-    <Library_Version>1.1.1.2</Library_Version>
+    <Library_Version>1.1.1.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\lvsrc</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -18,7 +18,9 @@
   <Advanced_Settings>
     <Package_Dependencies>
       <External_Dependencies>jki_lib_state_machine &gt;= 2018.0.7.45</External_Dependencies>
+      <External_Dependencies>oglib_appcontrol &gt;= 4.1.0.7</External_Dependencies>
       <Direct_Dependencies>jki_lib_state_machine-2018.0.7.45</Direct_Dependencies>
+      <Direct_Dependencies>oglib_appcontrol-4.1.0.7</Direct_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
@@ -36,7 +38,8 @@
       <Packager>John Maier</Packager>
       <URL/>
       <Release_Notes>- Update to LV2019
-- Relink subVIs, FTD LV drivers and dlls</Release_Notes>
+- Relink subVIs, FTD LV drivers and dlls
+--&gt; Major reorganizing of code</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -201,31 +204,17 @@
         <Synchronize_Directory_Path>..\lvsrc</Synchronize_Directory_Path>
       </Synchronization_Info>
       <Items_Data>
-        <Type>Sub Palette</Type>
-        <Sub_Palette_Index>1</Sub_Palette_Index>
-        <NameSub_Menu_Name>old-VIs</NameSub_Menu_Name>
-        <Short_Name>old-VIs</Short_Name>
+        <Type>Item</Type>
+        <Sub_Palette_Index>-1</Sub_Palette_Index>
+        <NameSub_Menu_Name>Read Resistor.vi</NameSub_Menu_Name>
+        <Short_Name/>
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>1</Row>
           <Column>1</Column>
         </Position>
-        <Icon>000004B0002900000012000000020000000D00FFFFFF000100000000000A00000008000000000020002000280000022C000001F8000000040007001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF084150FF48C153FFA95D56FFA941D1FF44C096FF000000FF002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</Icon>
-        <Path>..\lvsrc\old-VIs</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Sub Palette</Type>
-        <Sub_Palette_Index>2</Sub_Palette_Index>
-        <NameSub_Menu_Name>sub-VIs</NameSub_Menu_Name>
-        <Short_Name>sub-VIs</Short_Name>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>000004C5002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000002410000020D000000040007001D00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000000000000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000007F0080A87F6AC0A9FFCAAEAB7F2AA0E8FFC6C04B7F0000007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</Icon>
-        <Path>..\lvsrc\sub-VIs</Path>
+        <Icon>00000000</Icon>
+        <Path>..\lvsrc\API\Read Resistor.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -236,335 +225,13 @@
         <is_Merge_VI>false</is_Merge_VI>
         <Position>
           <Row>1</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\Set Resistor.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>USB Relay Control.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\USB Relay Control.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>EA7B262151606E4651CC317315DF075B</GUID>
-    </Functions_Palette_Data>
-    <Functions_Palette_Data>
-      <Parent_Palette_Index>0</Parent_Palette_Index>
-      <Name>old-VIs</Name>
-      <View_Format>Icons</View_Format>
-      <Size>
-        <Height_Row>1</Height_Row>
-        <Width_Col.>4</Width_Col.>
-      </Size>
-      <_256_Color_Icon>000004B0002900000012000000020000000D00FFFFFF000100000000000A00000008000000000020002000280000022C000001F8000000040007001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF084150FF48C153FFA95D56FFA941D1FF44C096FF000000FF002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
-      <BW_Color_Icon>00000000</BW_Color_Icon>
-      <Help_Info>
-        <Help_Tag/>
-        <Help_File_Path/>
-      </Help_Info>
-      <Description/>
-      <Synchronization_Info>
-        <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
-        <Synchronize_Directory_Path>..\lvsrc\old-VIs</Synchronize_Directory_Path>
-      </Synchronization_Info>
-      <GUID>1B0CF0C4801504CDC2C40C7458087EB8</GUID>
-    </Functions_Palette_Data>
-    <Functions_Palette_Data>
-      <Parent_Palette_Index>0</Parent_Palette_Index>
-      <Name>sub-VIs</Name>
-      <View_Format>Icons</View_Format>
-      <Size>
-        <Height_Row>4</Height_Row>
-        <Width_Col.>6</Width_Col.>
-      </Size>
-      <_256_Color_Icon>000004C5002900000012000000020000000D00FFFFFF000100000000000A0000000800000000002000200028000002410000020D000000040007001D00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000FFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFF000000000000000000000000FFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000FFFFFF000000FFFFFFFFFFFFFFFFFF000000000000000000FFFFFFFFFFFFFFFFFF000000000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFF000000FFFFFF000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000007F0080A87F6AC0A9FFCAAEAB7F2AA0E8FFC6C04B7F0000007F002900000012000000020000000D00CCCCFF000100000000000A00000008001900000020002000280000022C000001F8001900040020001C00180000000000FFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFF6C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C00006C0000FFFFFF6C00006C0000FFFFFFFFFFFF6C0000FFFFFFFFFFFFFFFFFF6C0000FFFFFFFFFFFF6C00006C0000FFFFFF6C0000FFFFFF6C0000FFFFFF6C00006C0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF9AAA26FF92AA55FF9ABA76FF939255FFD91356FF000000FF</_256_Color_Icon>
-      <BW_Color_Icon>00000000</BW_Color_Icon>
-      <Help_Info>
-        <Help_Tag/>
-        <Help_File_Path/>
-      </Help_Info>
-      <Description/>
-      <Synchronization_Info>
-        <Synchronyze_with_Directory>false</Synchronyze_with_Directory>
-        <Synchronize_Directory_Path>..\lvsrc\sub-VIs</Synchronize_Directory_Path>
-      </Synchronization_Info>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Close_Device.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Close_Device.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_EEPROM_Read.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\lvsrc\subVIs\FT_EEPROM_Read.vi</Path>
+        <Path>..\lvsrc\API\Set Resistor.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_EEPROM_Write.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\subVIs\FT_EEPROM_Write.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Get_Device_Description_By_Index.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Get_Device_Description_By_Index.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Open_Device_By_Index.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Open_Device_By_Index.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Purge.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Purge.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Read_FT232-FT245R_EEPROM.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Read_FT232-FT245R_EEPROM.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Reset_Device.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Reset_Device.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Set_Baud_Rate.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Set_Baud_Rate.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Set_Bit_Mode.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Set_Bit_Mode.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Set_Data_Characteristics.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Set_Data_Characteristics.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Set_DTR.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Set_DTR.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Set_Flow_Control.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Set_Flow_Control.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Set_RTS.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>2</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Set_RTS.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>FT_Write_String_Data.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\D2XX_Functions\FT_Write_String_Data.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Port Index Search.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>4</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\subVIs\Port Index Search.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Read_relay.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\subVIs\Read_relay.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>USB Relay Control 256.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>3</Row>
-          <Column>6</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\subVIs\USB Relay Control 256.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>USB Relay Control bool.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>false</is_Merge_VI>
-        <Position>
-          <Row>4</Row>
-          <Column>1</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\lvsrc\subVIs\USB Relay Control bool.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>15558627A5DE5AD483966F1169528B62</GUID>
+      <GUID>812B6F2556A17F734F03C0E61D86DDDB</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

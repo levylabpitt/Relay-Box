@@ -84,4 +84,5 @@
 		<Item Name="ftser2k.sys" Type="Document" URL="../i386/ftser2k.sys"/>
 		<Item Name="ftserui2.dll" Type="Document" URL="../i386/ftserui2.dll"/>
 	</Item>
+	<Item Name="FT_EEPROM_Read.vi" Type="VI" URL="../FT_EEPROM_Read.vi"/>
 </Library>

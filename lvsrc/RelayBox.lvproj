@@ -15,17 +15,7 @@
 			<Item Name="Relay Box.vipb" Type="Document" URL="../../build support/Relay Box.vipb"/>
 			<Item Name="Relay Box.vipc" Type="Document" URL="../../build support/Relay Box.vipc"/>
 		</Item>
-		<Item Name="subVIs" Type="Folder">
-			<Item Name="Display_EEPROM.vi" Type="VI" URL="../subVIs/Display_EEPROM.vi"/>
-			<Item Name="FT_EEPROM_Read.vi" Type="VI" URL="../subVIs/FT_EEPROM_Read.vi"/>
-			<Item Name="FT_EEPROM_Write.vi" Type="VI" URL="../subVIs/FT_EEPROM_Write.vi"/>
-			<Item Name="Port Index Search.vi" Type="VI" URL="../subVIs/Port Index Search.vi"/>
-			<Item Name="Read_relay.vi" Type="VI" URL="../subVIs/Read_relay.vi"/>
-			<Item Name="USB Relay Control 256.vi" Type="VI" URL="../subVIs/USB Relay Control 256.vi"/>
-			<Item Name="USB Relay Control bool.vi" Type="VI" URL="../subVIs/USB Relay Control bool.vi"/>
-		</Item>
-		<Item Name="USB Relay Control.vi" Type="VI" URL="../USB Relay Control.vi"/>
-		<Item Name="Set Resistor.vi" Type="VI" URL="../Set Resistor.vi"/>
+		<Item Name="Relay-Box.lvclass" Type="LVClass" URL="../Relay-Box.lvclass"/>
 		<Item Name="D2XX_Functions.lvlib" Type="Library" URL="../D2XX_Functions/D2XX_Functions.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -68,11 +58,11 @@
 				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="ftd2xx.dll" Type="Document" URL="../CDM v2.12.36.4 WHQL Certified/i386/ftd2xx.dll"/>
-			<Item Name="Resistor--enum.ctl" Type="VI" URL="../Typedefs/Resistor--enum.ctl"/>
-			<Item Name="FTD2XX.dll" Type="Document" URL="FTD2XX.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="Current VIs Parents Ref__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Current VIs Parents Ref__ogtk.vi"/>
+				<Item Name="Fit VI window to Largest Dec__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/appcontrol/appcontrol.llb/Fit VI window to Largest Dec__ogtk.vi"/>
 			</Item>
+			<Item Name="Resistor--enum.ctl" Type="VI" URL="../Typedefs/Resistor--enum.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
