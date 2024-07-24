@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2022-06-01 17:21:43" Modified_Date="2022-06-02 14:07:33" Creator="Patrick Irvin" Comments="" ID="4c917505cddb98184630dff1f87af273">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2022-06-01 17:21:43" Modified_Date="2024-07-24 17:23:08" Creator="Patrick Irvin" Comments="" ID="436e237f6f7b049252916155a111b6ea">
   <Library_General_Settings>
     <Package_File_Name>LevyLab_lib_Relay_Box</Package_File_Name>
-    <Library_Version>1.1.1.3</Library_Version>
+    <Library_Version>1.2.0.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\lvsrc</Library_Source_Folder>
     <Library_Output_Folder>..\builds\Package</Library_Output_Folder>
@@ -17,9 +17,9 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <External_Dependencies>jki_lib_state_machine &gt;= 2018.0.7.45</External_Dependencies>
+      <External_Dependencies>ftdi_lib_d2xx &gt;= 1.0.0.2</External_Dependencies>
       <External_Dependencies>oglib_appcontrol &gt;= 4.1.0.7</External_Dependencies>
-      <Direct_Dependencies>jki_lib_state_machine-2018.0.7.45</Direct_Dependencies>
+      <Direct_Dependencies>ftdi_lib_d2xx-1.0.0.2</Direct_Dependencies>
       <Direct_Dependencies>oglib_appcontrol-4.1.0.7</Direct_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
@@ -37,9 +37,8 @@
       <Copyright/>
       <Packager>John Maier</Packager>
       <URL/>
-      <Release_Notes>- Update to LV2019
-- Relink subVIs, FTD LV drivers and dlls
---&gt; Major reorganizing of code</Release_Notes>
+      <Release_Notes>- this release further disentagles the relay box code from the FTD2XX.dll wrapper code (by linking to a D2XX package instead of hosting internally)
+- relay state is stored with EEPROM user area rather than in manufacturer string</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -174,6 +173,7 @@
       <close_labview_before_install>false</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>false</Edit_VI_Description>
@@ -231,7 +231,7 @@
         <Path>..\lvsrc\API\Set Resistor.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>812B6F2556A17F734F03C0E61D86DDDB</GUID>
+      <GUID>FA579B060C78DBBB68FFE9D69D5CD55B</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
